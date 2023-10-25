@@ -7,7 +7,6 @@ height: 714px;
 border: 2px solid black;
 margin-right: auto;
 margin-left: auto;
-background-color: #000000;
 border-radius: 10px;
 `
 
@@ -25,11 +24,12 @@ const SFText = styled("div")`
 width: 449px;
 height: 39px;
 color: white;
-font-family: Arial;
+font-family: 'DM Serif Display', serif;
+font-family: 'Figtree', sans-serif;
 font-size: 32px;
 font-weight: 700;
 line-height: 31px;
-letter-spacing: 0em;
+letter-spacing: 0.01em;
 text-align: left;
 margin-left: 20px;
 margin-top: 12px;
@@ -58,7 +58,8 @@ width: 740px;
 height: 407px;
 margin-left: auto;
 margin-right: auto;
-margin-top: 80px;
+border-radius: 10px;
+margin-top: 40px;
 border: 2px solid black;
 z-index: 1;
 `
@@ -67,8 +68,8 @@ const Caption = styled("div")`
 width: 719px;
 height: 66px;
 margin-top: 20px;
-margin-left: 91px;
-font-family: Times;
+margin-left: 90px;
+font-family: Lobster Two;
 font-size: 32px;
 font-weight: 400;
 line-height: 44px;
@@ -77,6 +78,17 @@ text-align: left;
 color: black;
 z-index: 1;
 position: relative;
+`
+
+const SubCaption = styled("div")`
+font-family: DM Serif Display;
+font-size: 28px;
+font-weight: 400;
+letter-spacing: 0.105em;
+text-align: left;
+margin-left: 90px;
+margin-top: 32px;
+
 `
 
 const StaffFavorites = () => {
@@ -91,7 +103,9 @@ const StaffFavorites = () => {
             <LittleBox>
             <BrownBox></BrownBox>
             </LittleBox>
-            <Caption> text goes here</Caption>
+            <Caption>
+              Name of the video<br/>This can have two lines ayaya ayaya ayaya ayaya</Caption>
+            <SubCaption>BY JOSEPHSON BRUINDAUGHT</SubCaption>
          </WhiteBox>
     </Container>
   )
