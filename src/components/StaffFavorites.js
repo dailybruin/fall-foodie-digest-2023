@@ -91,7 +91,7 @@ margin-top: 32px;
 
 `
 
-const StaffFavorites = () => {
+const StaffFavorites = (props) => {
   return (
     <Container>
          <WhiteBox>
@@ -101,11 +101,15 @@ const StaffFavorites = () => {
             </SFText>
          </GreenBox>
             <LittleBox>
-            <BrownBox></BrownBox>
+            <BrownBox>
+                <video width="100%" height="100%" controls>
+                    <source src={props.video_url} type="video/mp4" />
+                    Your browser does not support the video tag.
+                </video>
+            </BrownBox>
             </LittleBox>
-            <Caption>
-              Name of the video<br/>This can have two lines ayaya ayaya ayaya ayaya</Caption>
-            <SubCaption>BY JOSEPHSON BRUINDAUGHT</SubCaption>
+            <Caption>{props.video_name}</Caption>
+            <SubCaption>{props.video_byline}</SubCaption>
          </WhiteBox>
     </Container>
   )
