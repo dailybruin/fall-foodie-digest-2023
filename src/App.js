@@ -9,6 +9,8 @@ import Footer from './components/Footer';
 import FoodieFeatures from './components/FoodieFeatures';
 import RelatedCoverage from  './components/RelatedCoverage';
 import MobileFoodie from './components/MobileFoodie'
+import CollegeStudentMediaDiary from "./components/CollegeStudentMealDiary";
+import StaffFavorites from "./components/StaffFavorites";
 
 function App() {
   const [ data, setData ] = useState(null);
@@ -33,6 +35,8 @@ function App() {
     return data && (
       <div className="App">
         <Header/>
+        <CollegeStudentMediaDiary article={data.college_student_meal_diary}/>
+        <StaffFavorites/>
         <FoodieFeatures related={data.foodie_features}/>
         <RelatedCoverage coverage={data.related_coverage}/>
         <Footer/>
@@ -40,8 +44,6 @@ function App() {
     );
   }
   
-
-
 }
 
 export default App;
