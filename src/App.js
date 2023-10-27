@@ -4,6 +4,7 @@ import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import CollegeStudentMediaDiary from "./components/CollegeStudentMealDiary";
+import StaffFavorites from "./components/StaffFavorites";
 
 function App() {
   const [ data, setData ] = useState(null);
@@ -19,6 +20,7 @@ function App() {
       <Header/>
       Hello Daily Bruin!
       <CollegeStudentMediaDiary article={data.college_student_meal_diary}/>
+      <StaffFavorites/>
       <Footer/>
     </div>
   );
