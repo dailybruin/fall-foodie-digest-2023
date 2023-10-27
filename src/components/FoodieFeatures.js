@@ -9,15 +9,16 @@ const Container = styled.div`
     margin-left: auto;
     border-radius: 10px;
     width: 896px;
-    height: 633px;
     ${mediaQueries.mobile}{
         margin: auto;
         height: 1200px;
         width: 400px;
     }
+    padding-bottom: 3em;
 `
 const Header = styled.div`
     width: 100%;
+    height: 60px;
     border-radius: 10px;
     border: 2px solid black;
     background: #41533E;
@@ -26,14 +27,13 @@ const Header = styled.div`
 `
 
 const Title = styled.div`
-    width: 449px;
-    height: 39px;
-    margin-top: 20px;
-    margin-right: 20px;
     font-weight: 700;
     font-size: 32px;
     font-line-height: 30.62px;
     color: #FFFFFF;
+    text-align: left;
+    margin-left: 20px;
+    margin-top: 12px;
 `
 
 const Grid = styled.div`
@@ -65,12 +65,12 @@ const FoodieFeatures = (props) => {
                     {props && props.related ? props.related.map((item) => {
                         return(
                             <FoodieCard
-                                food_name={props.related.food_name}
-                                food_byline={props.related.food_byline}
-                                food_image={props.related.food_image}
-                                food_image_credits={props.related.food_image_credits}
-                                food_text={props.related.food_text}
-                                food_url={props.related.food_url}
+                                food_name={item.food_name}
+                                food_byline={item.food_byline}
+                                food_image={item.food_image}
+                                food_image_credits={item.food_image_credits}
+                                food_text={item.food_text}
+                                food_url={item.food_url}
                             />
                         );
                     })

@@ -2,12 +2,11 @@ import styled from 'styled-components';
 import React from 'react';
 
 const Container = styled("div")`
-width: 896px;
-height: 714px;
-border: 2px solid black;
-margin-right: auto;
-margin-left: auto;
-border-radius: 10px;
+  width: 896px;
+  border: 2px solid black;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 10px;
 `
 
 const GreenBox = styled("div")`
@@ -32,8 +31,8 @@ line-height: 31px;
 letter-spacing: 0.01em;
 text-align: left;
 margin-left: 20px;
-margin-top: 12px;
-`
+margin-top: 15px;
+`;
 
 const WhiteBox = styled("div")`
   background-color: #FCF1D9;
@@ -87,7 +86,7 @@ font-weight: 400;
 letter-spacing: 0.105em;
 text-align: left;
 margin-left: 90px;
-margin-top: 32px;
+text-transform: uppercase;
 
 `
 

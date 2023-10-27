@@ -1,24 +1,44 @@
 import React from 'react'
 import styled from 'styled-components'
+
+
 const Container = styled.div`
     border-color: black;
+    width: 896px;
+    margin: auto;
+
 `
+const GreenBox = styled("div")`
+  background-color: #41533E;
+  width: 100%;
+  height: 60px;
+  border-radius: 10px;
+  border: 2px solid black;
+  margin-left: -2px;
+  margin-top: -2px;
+`;
 
 const Header = styled.div`
     background-color: #41533E;
-    height: 8vh;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    border: solid;
-    border-bottom-color: transparent;
-    margin: 0 15vw 0;
-    text-align: left; 
-    line-height: 3vh;   
+    width: 100%;
+    height: 60px;
+    border-radius: 10px;
+    border: 2px solid black;
+    margin-left: -2px;
+    margin-top: -2px;
     h1 {
-        font-family: 'Figtree', sans-serif;
+        width: 100%;
+        height: 39px;
         color: white;
-        font-size: 25px;
-        margin-left: 15px;
+        font-family: 'DM Serif Display', serif;
+        font-family: 'Figtree', sans-serif;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 31px;
+        letter-spacing: 0.01em;
+        text-align: left;
+        margin-left: 20px;
+        margin-top: 15px;
     }
 `
 /*
@@ -30,6 +50,7 @@ const Header = styled.div`
 */
 const Body = styled.div`
     .wrapper{
+        width: 100%;
         display: grid;
         border: solid;
         border-color: black;
@@ -38,7 +59,6 @@ const Body = styled.div`
         border-bottom-left-radius: 10px; 
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2);
-        margin: 0 15vw 0;
         
     }
     .PicOne {
@@ -145,7 +165,7 @@ const Body = styled.div`
 const CollegeStudentMediaDiary = (props) => {
     console.log(props)
   return (
-    <React.Fragment>
+    <div>
         <Container>
         <Header>
             <h1>COLLEGE STUDENT MEAL DIARY</h1>
@@ -184,7 +204,7 @@ const CollegeStudentMediaDiary = (props) => {
         </div>
       </Body>
       </Container>
-    </React.Fragment>
+    </div>
   )
 }
 

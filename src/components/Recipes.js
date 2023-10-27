@@ -10,31 +10,37 @@ const OuterContainer = styled.div`
   flex-direction: column;
   align-items: center;
   margin: 20px auto;
-  width: 70%;
+  width: 896px;
   min-height: 400px;
   height: fit-content;
-  border: 1px black solid;
-  border-radius: 5px;
+  border: 2px black solid;
+  border-radius: 10px;
   background-color: #fcf1d9;
   overflow: hidden;
 `;
 
+
 const InnerContainer = styled.div`
   width: 100%;
-  height: 30px; /* Adjust the height as needed */
+  height: 60px; /* Adjust the height as needed */
   background-color: #41533e;
   border: 1px black solid;
   border-radius: 5px;
-  top: 0;
+  font-size: 32px;
+
 `;
 
 const InnerContainerText = styled.h3`
-  width: 40px;
-  height: 30px; /* Adjust the height as needed */
   color: white;
-  padding-top: 2px;
-  padding-left: 7px;
-  margin-top: 0;
+  font-family: 'DM Serif Display', serif;
+  font-family: 'Figtree', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 31px;
+  letter-spacing: 0.01em;
+  text-align: left;
+  margin-left: 20px;
+  margin-top: 15px;
 `;
 
 const SemiCircleContainer = styled.div`
@@ -72,12 +78,13 @@ const Carousel = styled.div`
 `;
 
 const CarouselImage = styled.img`
-  width: 100%;
-  height: 80%;
-  left: 0;
-  position: absolute;
+  width: 75%;
+  height: 75%;
+  margin: auto;
+  position: relative;
   top: 1.5em;
   border-radius: 30px;
+  padding-top: 0.5em;
 `;
 
 const CarouselItemName = styled.h3`
@@ -89,16 +96,21 @@ const CarouselItemName = styled.h3`
   margin-right: auto;
   left: 0;
   right: 0;
+  font-family: Lobster Two;
+  font-size: 20px;
 `;
 
 const CarouselItemByLine = styled.p`
-  bottom: -1em;
+  bottom: -1.5em;
   position: absolute;
   color: white;
   margin-left: auto;
   margin-right: auto;
   left: 0;
   right: 0;
+  font-family: DM Serif Display;
+  text-transform: uppercase;
+
 `;
 
 //NAVIGATION FOR CAROUSEL
@@ -139,7 +151,7 @@ export default function Recipes(props) {
 
   const goToNextRecipe = () => {
     setCurrentRecipe((prevRecipe) =>
-      prevRecipe === 0 ? props.recipes.length - 1 : prevRecipe - 1
+      prevRecipe === props.recipes.length - 1 ? 0 : prevRecipe + 1
     );
   };
 

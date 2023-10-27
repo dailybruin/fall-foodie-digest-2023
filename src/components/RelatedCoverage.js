@@ -9,11 +9,9 @@ const Container = styled.div`
     margin-left: auto;
     border-radius: 10px;
     width: 896px;
-    height: 401px;
     ${mediaQueries.mobile}{
         margin: auto;
-        height: 1200px;
-        width: 276px;
+        width: 70%;
     }
 `
 const Header = styled.div`
@@ -24,20 +22,24 @@ const Header = styled.div`
     background: #41533E;
     margin-left: -2px;
     margin-top: -2px;
+    ${mediaQueries.mobile}{
+        height: 30px;
+    }
 `
 
 const Title = styled.div`
-    width: 449px;
-    height: 39px;
-    margin-top: 20px;
-    margin-right: 20px;
     font-weight: 700;
     font-size: 32px;
     font-line-height: 30.62px;
     color: #FFFFFF;
+    text-align: left;
+    margin-left: 20px;
+    margin-top: 12px;
+    
     ${mediaQueries.mobile}{
-        font-size: 20px;
-        margin-left: -6em;
+        font-size: 14px;
+        margin-left:10px;
+        margin-top:5px;
     }
 `
 
@@ -46,7 +48,6 @@ const Grid = styled.div`
     margin: atuo;
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    column-grap: 10px;
     row-gap: 10px;
     justify-items: center;
     ${mediaQueries.mobile}{
@@ -54,9 +55,10 @@ const Grid = styled.div`
         grid-template-columns: repeat(1,1fr);
         margin: auto;
         align-items: center;
-        column-gap: 2em;
-        row-grap: 1em;
+        column-gap: 1em;
+        row-gap: 0.1em;
     }
+    padding-bottom: 3em;
 `;
 
 const RelatedCoverage = (props) => {
