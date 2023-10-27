@@ -20,29 +20,30 @@ function App() {
 		.then(res => setData(res.data['article.aml']))
   }, []);
 
-  if(isMobile)
-  {
+
+  // if(!isMobile)
+  // {
+  //   return data && (
+  //     <div className="App">
+  //       <Header/>
+  //       <RelatedCoverage coverage={data.related_coverage}/>
+  //       <MobileFoodie mobile={data.foodie_features}/>
+  //       <Footer/>
+  //     </div>
+  //   )
+  // }
+  // else{
     return data && (
       <div className="App">
         <Header/>
-        <RelatedCoverage coverage={data.related_coverage}/>
-        <MobileFoodie mobile={data.foodie_features}/>
-        <Footer/>
-      </div>
-    );
-  }
-  else{
-    return data && (
-      <div className="App">
-        <Header/>
-        <CollegeStudentMediaDiary article={data.college_student_meal_diary}/>
-        <StaffFavorites/>
+        <CollegeStudentMediaDiary articles={data.college_student_meal_diary[0]}/>
+        <StaffFavorites video={data.staff_favorites[0]}></StaffFavorites>
         <FoodieFeatures related={data.foodie_features}/>
         <RelatedCoverage coverage={data.related_coverage}/>
         <Footer/>
       </div>
-    );
-  }
+    )
+  // }
   
 }
 
