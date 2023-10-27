@@ -11,6 +11,8 @@ import RelatedCoverage from  './components/RelatedCoverage';
 import MobileFoodie from './components/MobileFoodie'
 import CollegeStudentMediaDiary from "./components/CollegeStudentMealDiary";
 import StaffFavorites from "./components/StaffFavorites";
+import Recipes from "./components/Recipes";
+
 
 function App() {
   const [ data, setData ] = useState(null);
@@ -36,6 +38,7 @@ function App() {
     return data && (
       <div className="App">
         <Header/>
+        <Recipes recipes={data.recipes}></Recipes>
         <CollegeStudentMediaDiary articles={data.college_student_meal_diary[0]}/>
         <StaffFavorites video={data.staff_favorites[0]}></StaffFavorites>
         <FoodieFeatures related={data.foodie_features}/>
