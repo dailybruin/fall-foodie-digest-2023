@@ -59,7 +59,7 @@ const Grid = styled.div`
     }
 `;
 
-const RelatedCoverage = (props) => {
+const MobileFoodie = (props) => {
     return (
         <>
             <Container>
@@ -67,7 +67,7 @@ const RelatedCoverage = (props) => {
                     <Title>RELATED COVERAGE</Title>
                 </Header>
                 <Grid>
-                    {props && props.coverage ? props.coverage.map((item) => {
+                    {props && props.mobile ? props.mobile.map((item) => {
                         return(
                             <RelatedCard
                                 article_title={item.article_title}
@@ -85,4 +85,4 @@ const RelatedCoverage = (props) => {
     )
 }
 
-export default RelatedCoverage;
+export default MobileFoodie;

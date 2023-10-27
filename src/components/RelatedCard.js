@@ -13,34 +13,37 @@ const Container = styled.div`
     margin-top: 50px;
 `;
 
+const Title = styled.div`
+    margin-top: 1em;
+`
 const Image = styled.img`
-    width: 100px;
-    height: 100px;
+    width: 80%;
+    height: 50%;
     border: 1px solid black;
     position: relative;
     margin-top: 1em;
+    border-radius: 10px;
 `
 const Byline = styled.div`
     position: absolute;
     width: 30%;
-    margin-left: 0.5em;
-    margin-top: 1em;
     margin-bottom: 1em;
     position: relative;
 `
 const Credit = styled.div`
-    margin-top: -1em;
-    margin-right: -2em;
+    margin-top: 1em;
+    margin-right: 1em;
+    font-size: 10px;
+    margin-right: -15em;
 `
 const RelatedCard = (props) => {
     return (
         <>
             <Container>
                 <Image src = {props.article_image}/>
-                <h1>{props.article_title}</h1>
                 <Credit>PHOTO | {props.article_image_credit}</Credit>
-                <Byline>By {props.article_byline}</Byline>
-                <p>{props.article_url}</p>
+                <Title href = {props.article_url}>{props.article_title}</Title>
+                <Byline>{props.article_byline}</Byline>
             </Container>
         </>
     )
