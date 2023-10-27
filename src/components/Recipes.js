@@ -41,7 +41,6 @@ const SemiCircleContainer = styled.div`
   width: 80%;
   height: 70%; /* Adjust the height as needed */
   position: absolute;
-  border: 1px black solid;
   bottom: 0;
 `;
 
@@ -64,19 +63,42 @@ const CarouselContainer = styled.div`
 const Carousel = styled.div`
   width: 50%;
   height: 100%;
-  border: 1px red solid;
+  //   border: 1px solid red;
   border-radius: 5px;
-  position: absolute;
-  bottom: 0;
+  position: relative;
   left: 25%;
+  margin-bottom: 2em;
+  top: -1em;
 `;
 
 const CarouselImage = styled.img`
   width: 100%;
   height: 80%;
-  position: absolute;
-  bottom: 0;
   left: 0;
+  position: absolute;
+  top: 1.5em;
+  border-radius: 30px;
+`;
+
+const CarouselItemName = styled.h3`
+  top: 0;
+  margin: 0;
+  position: absolute;
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+`;
+
+const CarouselItemByLine = styled.p`
+  bottom: -1em;
+  position: absolute;
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
 `;
 
 //NAVIGATION FOR CAROUSEL
@@ -106,15 +128,6 @@ const NavigationButtonLeft = styled.button`
   right: 5%;
 `;
 
-const recipeData = [
-  "Recipe 1",
-  "Recipe 2",
-  "Recipe 3",
-  "Recipe 4",
-  "Recipe 5",
-  "Recipe 6",
-];
-
 export default function Recipes(props) {
   const [currentRecipe, setCurrentRecipe] = useState(0);
 
@@ -142,12 +155,16 @@ export default function Recipes(props) {
             &#8249;
           </NavigationButtonRight>
           <Carousel>
-            <h3>{props.recipes[currentRecipe].recipe_name}</h3>
-            <p>{props.recipes[currentRecipe].recipe_byline}</p>
+            <CarouselItemName>
+              {props.recipes[currentRecipe].recipe_name}
+            </CarouselItemName>
             <CarouselImage
               src={props.recipes[currentRecipe].recipe_image}
               alt={props.recipes[currentRecipe].recipe_name}
             />
+            <CarouselItemByLine>
+              {props.recipes[currentRecipe].recipe_byline}
+            </CarouselItemByLine>
             <p>{props.recipes[currentRecipe].recipe_img_credit}</p>
             <a
               href={props.recipes[currentRecipe].recipe_url}
