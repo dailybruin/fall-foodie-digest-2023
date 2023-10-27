@@ -15,7 +15,7 @@ const Header = styled.div`
     text-align: left; 
     line-height: 3vh;   
 	h1 {
-		font-family: 'Montserrat', sans-serif;
+		font-family: 'Figtree', sans-serif;
         color: white;
         font-size: 25px;
         margin-left: 15px;
