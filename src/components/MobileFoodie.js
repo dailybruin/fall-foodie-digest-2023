@@ -8,13 +8,8 @@ const Container = styled.div`
     margin-right: auto;
     margin-left: auto;
     border-radius: 10px;
-    width: 896px;
-    height: 401px;
-    ${mediaQueries.mobile}{
-        margin: auto;
-        height: 1200px;
-        width: 276px;
-    }
+    width: 276px;
+    height: 800px;
 `
 const Header = styled.div`
     width: 100%;
@@ -31,14 +26,11 @@ const Title = styled.div`
     height: 39px;
     margin-top: 20px;
     margin-right: 20px;
+    margin-left: -6em;
     font-weight: 700;
-    font-size: 32px;
+    font-size: 20px;
     font-line-height: 30.62px;
     color: #FFFFFF;
-    ${mediaQueries.mobile}{
-        font-size: 20px;
-        margin-left: -6em;
-    }
 `
 
 const Grid = styled.div`
@@ -64,17 +56,17 @@ const MobileFoodie = (props) => {
         <>
             <Container>
                 <Header>
-                    <Title>RELATED COVERAGE</Title>
+                    <Title>FOODIE FEATURES</Title>
                 </Header>
                 <Grid>
                     {props && props.mobile ? props.mobile.map((item) => {
                         return(
                             <RelatedCard
-                                article_title={item.article_title}
-                                article_image={item.article_image}
-                                article_url={item.article_url}
-                                article_byline={item.article_byline}
-                                article_img_credit={item.article_img_credit}
+                                article_image={item.food_image}
+                                article_url={item.food_url}
+                                article_image_credits={item.food_image_credits}
+                                article_title={item.food_name}
+                                article_byline={item.food_byline}
                             />
                         );
                     })

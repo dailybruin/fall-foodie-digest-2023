@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { mediaQueries } from '../shared/config';
 import FoodieCard from './FoodieCard';
 
 const Container = styled.div`
@@ -10,11 +9,6 @@ const Container = styled.div`
     border-radius: 10px;
     width: 896px;
     height: 633px;
-    ${mediaQueries.mobile}{
-        margin: auto;
-        height: 1200px;
-        width: 400px;
-    }
 `
 const Header = styled.div`
     width: 100%;
@@ -44,14 +38,6 @@ const Grid = styled.div`
     column-gap: 10px;
     row-gap: 10px;
     justify-items: center;
-    ${mediaQueries.mobile}{
-        display: grid;
-        grid-template-columns: repeat(1,1fr);
-        margin: auto;
-        align-items: center;
-        column-gap: 2em;
-        row-grap: 1em;
-    }
 `;
 
 const FoodieFeatures = (props) => {
@@ -65,12 +51,12 @@ const FoodieFeatures = (props) => {
                     {props && props.related ? props.related.map((item) => {
                         return(
                             <FoodieCard
-                                food_name={props.related.food_name}
-                                food_byline={props.related.food_byline}
-                                food_image={props.related.food_image}
-                                food_image_credits={props.related.food_image_credits}
-                                food_text={props.related.food_text}
-                                food_url={props.related.food_url}
+                                food_name={item.food_name}
+                                food_byline={item.food_byline}
+                                food_image={item.food_image}
+                                food_image_credits={item.food_image_credits}
+                                food_text={item.food_text}
+                                food_url={item.food_url}
                             />
                         );
                     })

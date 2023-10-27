@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import styled from 'styled-components';
 import {isMobile} from 'react-device-detect';
 import './App.css';
 
@@ -12,19 +11,23 @@ import MobileFoodie from './components/MobileFoodie'
 
 function App() {
   const [ data, setData ] = useState(null);
+  const [isMobileDevice, setIsMobileDevice] = useState(isMobile)
   useEffect(() => {
 		fetch("https://kerckhoff.dailybruin.com/api/packages/flatpages/fall-foodie-2023")
 		.then(res => res.json())
 		.then(res => setData(res.data['article.aml']))
   }, []);
 
+  useEffect(() => {
+    setIsMobileDevice(isMobile);
+  }, []);
+
   if(isMobile)
   {
     return data && (
       <div className="App">
-        <Header/>
-        <RelatedCoverage coverage={data.related_coverage}/>
         <MobileFoodie mobile={data.foodie_features}/>
+        <RelatedCoverage coverage={data.related_coverage}/>
         <Footer/>
       </div>
     );
@@ -39,7 +42,6 @@ function App() {
       </div>
     );
   }
-  
 
 
 }
