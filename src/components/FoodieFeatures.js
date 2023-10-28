@@ -9,11 +9,11 @@ const Container = styled.div`
     margin-left: auto;
     border-radius: 10px;
     width: 896px;
-    ${mediaQueries.mobile}{
-        margin: auto;
-        height: 1200px;
-        width: 400px;
-    }
+    // ${mediaQueries.mobile}{
+    //     margin: auto;
+    //     height: 1200px;
+    //     width: 400px;
+    // }
     padding-bottom: 3em;
 `
 const Header = styled.div`
@@ -44,14 +44,14 @@ const Grid = styled.div`
     column-gap: 10px;
     row-gap: 10px;
     justify-items: center;
-    ${mediaQueries.mobile}{
-        display: grid;
-        grid-template-columns: repeat(1,1fr);
-        margin: auto;
-        align-items: center;
-        column-gap: 2em;
-        row-grap: 1em;
-    }
+    // ${mediaQueries.mobile}{
+    //     display: grid;
+    //     grid-template-columns: repeat(1,1fr);
+    //     margin: auto;
+    //     align-items: center;
+    //     column-gap: 2em;
+    //     row-grap: 1em;
+    // }
 `;
 
 const FoodieFeatures = (props) => {

@@ -9,9 +9,8 @@ import { mediaQueries } from '../shared/config';
 
 
 const Container = styled.div`
-	background-color: black;
 	height: auto;
-	color: white;
+	color: black;
 	padding: 60px 0 10px 0;
     text-align: center;
 	h1 {
@@ -30,10 +29,13 @@ const Socials = styled.div`
 
     position: relative;
 		margin: 0 20px;
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
 	}
 	p {
     position: relative;
 		margin: 80px 20px;
+    font-family: Avenir;
 		${mediaQueries.mobile} {
 			margin: 50px 20px;
 		}
@@ -50,7 +52,8 @@ const Footer = () => {
           <a href="https://www.twitter.com/dailybruin" target="_blank"><img src={twitter}/></a>
           <a href="https://www.tiktok.com/@dailybruin" target="_blank"><img src={tiktok}/></a>
           <a href="http://eepurl.com/cFEiZX" target="_blank"><img src={email}/></a>
-          <p>Built with Suzy’s ♥ in Kerckhoff 118 by [developers]. Designed by [designers].</p>
+          <p>Built with Suzy’s ♥ in Kerckhoff 118 by Annie Tran, Donny Rimer, Ed Nawrocki, Nicole Ju, Sakshi Thoutireddy, Tracy Zhao, Yifan Tang.
+          Designed by Tyler Cho.</p>
         </Socials>
     </Container>
     )

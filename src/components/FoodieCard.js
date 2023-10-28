@@ -8,9 +8,9 @@ const Container = styled.div`
     left: 322px;
     background-color: white;
     margin: 50px auto 0px;
-    ${mediaQueries.mobile}{
-        width: 236px;
-    }
+    // ${mediaQueries.mobile}{
+    //     width: 236px;
+    // }
 `;
 
 const Title = styled.div`

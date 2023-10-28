@@ -3,41 +3,39 @@ import { mediaQueries } from '../shared/config';
 import RelatedCard from './RelatedCard';
 
 const Container = styled.div`
-    border: 2px solid black;
+    border: 1px solid black;
     background: #FCF1D9;
     margin-right: auto;
     margin-left: auto;
     border-radius: 10px;
-    width: 896px;
-    height: 401px;
-    ${mediaQueries.mobile}{
-        margin: auto;
-        height: 1200px;
-        width: 276px;
-    }
+    width: 70%;
 `
 const Header = styled.div`
     width: 100%;
     height: 60px;
     border-radius: 10px;
-    border: 2px solid black;
+    border: 1px solid black;
     background: #41533E;
     margin-left: -2px;
     margin-top: -2px;
+    ${mediaQueries.mobile}{
+        height: 30px;
+    }
 `
 
 const Title = styled.div`
-    width: 449px;
-    height: 39px;
-    margin-top: 20px;
-    margin-right: 20px;
     font-weight: 700;
     font-size: 32px;
     font-line-height: 30.62px;
     color: #FFFFFF;
+    text-align: left;
+    margin-left: 20px;
+    margin-top: 12px;
+
     ${mediaQueries.mobile}{
-        font-size: 20px;
-        margin-left: -6em;
+        font-size: 14px;
+        margin-left:10px;
+        margin-top:5px;
     }
 `
 
@@ -55,8 +53,10 @@ const Grid = styled.div`
         margin: auto;
         align-items: center;
         column-gap: 2em;
-        row-grap: 1em;
+        row-gap: 0.1em;
     }
+    padding-bottom: 3em;
+
 `;
 
 const MobileFoodie = (props) => {
@@ -64,17 +64,17 @@ const MobileFoodie = (props) => {
         <>
             <Container>
                 <Header>
-                    <Title>RELATED COVERAGE</Title>
+                    <Title>FOODIE FEATURES</Title>
                 </Header>
                 <Grid>
                     {props && props.mobile ? props.mobile.map((item) => {
                         return(
                             <RelatedCard
-                                article_title={item.article_title}
-                                article_image={item.article_image}
-                                article_url={item.article_url}
-                                article_byline={item.article_byline}
-                                article_img_credit={item.article_img_credit}
+                                article_image={item.food_image}
+                                article_url={item.food_url}
+                                article_img_credit={item.food_image_credits}
+                                article_title={item.food_name}
+                                article_byline={item.food_byline}
                             />
                         );
                     })

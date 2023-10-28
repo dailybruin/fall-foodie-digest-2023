@@ -18,7 +18,7 @@ Things that this code doesn't account for:
 const OuterContainer = styled.div`
   background-color: #fcf1d9;
   height: 790px;
-  width: 60%;
+  width: 896px;
   margin: 0 auto;
   border: 2px solid black;
   border-radius: 10px;
@@ -129,6 +129,7 @@ const ByLine = styled.div`
   font-family: 'DM Serif Display', serif;
   font-size: 15px;
   margin: 5px 30px 10px 30px;
+  text-transform: uppercase;
 `;
 
 const ArticleImage = styled.img`
@@ -145,12 +146,13 @@ const ArticleImage = styled.img`
 const PhotoCredits = styled.div`
   display: block;
   font-family: 'Josefin Sans', sans-serif;
-  font-size: 10px;
+  font-size: 6px;
   text-align: right;
   font-color: black;
   box-sizing: border-box;
   padding-right: 45px;
   margin-top: 8px;
+  text-transform: uppercase;
 `;
 
 const Chef_Interviews = (props) => {
@@ -179,7 +181,7 @@ const Chef_Interviews = (props) => {
                   src={data.interview_top_image}
                   alt="article image"
                 />
-                <PhotoCredits>{data.interview_top_img_credits}</PhotoCredits>
+                <PhotoCredits>PHOTO | {data.interview_top_img_credits}</PhotoCredits>
               </SpeechBubbleOverlay>
             </SpeechBubble>
           </TopLeftSpeechBubble>
@@ -207,7 +209,7 @@ const Chef_Interviews = (props) => {
                   src={data.interview_bottom_image}
                   alt="article image"
                 />
-                <PhotoCredits>{data.interview_bottom_img_credits}</PhotoCredits>
+                <PhotoCredits>PHOTO | {data.interview_bottom_img_credits}</PhotoCredits>
               </SpeechBubbleOverlay>
             </SpeechBubble>
           </BottomRightSpeechBubble>

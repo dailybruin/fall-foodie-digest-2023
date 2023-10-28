@@ -3,29 +3,23 @@ import { mediaQueries } from '../shared/config';
 import RelatedCard from './RelatedCard';
 
 const Container = styled.div`
-    border: 2px solid black;
+    border: 1px solid black;
     background: #FCF1D9;
     margin-right: auto;
     margin-left: auto;
     border-radius: 10px;
-    width: 896px;
-    ${mediaQueries.mobile}{
-        margin: auto;
-        width: 70%;
-        border: 1px solid black;
-    }
+    width: 70%;
 `
 const Header = styled.div`
     width: 100%;
     height: 60px;
     border-radius: 10px;
-    border: 2px solid black;
+    border: 1px solid black;
     background: #41533E;
     margin-left: -2px;
     margin-top: -2px;
     ${mediaQueries.mobile}{
         height: 30px;
-        border: 1px solid black;
     }
 `
 
@@ -37,7 +31,7 @@ const Title = styled.div`
     text-align: left;
     margin-left: 20px;
     margin-top: 12px;
-    
+
     ${mediaQueries.mobile}{
         font-size: 14px;
         margin-left:10px;
@@ -50,6 +44,7 @@ const Grid = styled.div`
     margin: atuo;
     display: grid;
     grid-template-columns: repeat(3,1fr);
+    column-grap: 10px;
     row-gap: 10px;
     justify-items: center;
     ${mediaQueries.mobile}{
@@ -57,36 +52,39 @@ const Grid = styled.div`
         grid-template-columns: repeat(1,1fr);
         margin: auto;
         align-items: center;
-        column-gap: 1em;
+        column-gap: 2em;
         row-gap: 0.1em;
     }
     padding-bottom: 3em;
+
 `;
 
-const RelatedCoverage = (props) => {
+const MobileChefInterviews = (props) => {
     return (
         <>
             <Container>
                 <Header>
-                    <Title>RELATED COVERAGE</Title>
+                    <Title>CHEF INTERVIEWS</Title>
                 </Header>
                 <Grid>
-                    {props && props.coverage ? props.coverage.map((item) => {
-                        return(
-                            <RelatedCard
-                                article_title={item.article_title}
-                                article_image={item.article_image}
-                                article_url={item.article_url}
-                                article_byline={item.article_byline}
-                                article_img_credit={item.article_img_credit}
-                            />
-                        );
-                    })
-                : null}
+                    <RelatedCard
+                        article_image={props.mobile.interview_top_image}
+                        article_url={props.mobile.interview_top_url}
+                        article_img_credit={props.mobile.interview_top_img_credits}
+                        article_title={props.mobile.interview_top_name}
+                        article_byline={props.mobile.interview_top_byline}
+                    />
+                     <RelatedCard
+                        article_image={props.mobile.interview_bottom_image}
+                        article_url={props.mobile.interview_bottom_url}
+                        article_img_credit={props.mobile.interview_bottom_img_credits}
+                        article_title={props.mobile.interview_bottom_name}
+                        article_byline={props.mobile.interview_bottom_byline}
+                    />
                 </Grid>
             </Container>
         </>
     )
 }
 
-export default RelatedCoverage;
+export default MobileChefInterviews;
