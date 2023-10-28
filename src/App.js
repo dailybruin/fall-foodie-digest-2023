@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import {isMobile} from 'react-device-detect';
 import { mediaQueries } from './shared/config';
@@ -10,6 +10,8 @@ import mobileLeaves from "./images/mobileLeaves.png";
 
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Chef_Interviews from './components/Chef_Interviews';
+
 import FoodieFeatures from './components/FoodieFeatures';
 import RelatedCoverage from  './components/RelatedCoverage';
 import MobileFoodie from './components/MobileFoodie';
@@ -55,6 +57,7 @@ function App() {
         <Header/>
         <Recipes recipes={data.recipes}></Recipes>
         <br></br>
+        <Chef_Interviews interviews={data.chef_interviews[0]} />
         <FoodieFeatures related={data.foodie_features}/>
         <br></br><br></br>
         <CollegeStudentMediaDiary articles={data.college_student_meal_diary[0]}/>
