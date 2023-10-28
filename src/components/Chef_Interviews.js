@@ -18,7 +18,7 @@ Things that this code doesn't account for:
 const OuterContainer = styled.div`
   background-color: #fcf1d9;
   height: 790px;
-  width: 896px;
+  width: 63%;
   margin: 0 auto;
   border: 2px solid black;
   border-radius: 10px;

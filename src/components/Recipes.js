@@ -10,7 +10,7 @@ const OuterContainer = styled.div`
   flex-direction: column;
   align-items: center;
   margin: 20px auto;
-  width: 896px;
+  width: 63%;
   min-height: 400px;
   height: fit-content;
   border: 2px black solid;

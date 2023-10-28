@@ -8,7 +8,7 @@ const Container = styled.div`
     margin-right: auto;
     margin-left: auto;
     border-radius: 10px;
-    width: 896px;
+    width: 63%;
     ${mediaQueries.mobile}{
         margin: auto;
         width: 70%;
