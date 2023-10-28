@@ -26,6 +26,7 @@ function App() {
   {
     return data && (
       <div className="App">
+        <Header/>
         <MobileFoodie mobile={data.foodie_features}/>
         <RelatedCoverage coverage={data.related_coverage}/>
         <Footer/>
