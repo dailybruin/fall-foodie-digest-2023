@@ -6,6 +6,10 @@ const Container = styled.div`
     border-color: black;
     width: 63%;
     margin: auto;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    border-radius: 10px;
 
 `
 const GreenBox = styled("div")`
@@ -49,14 +53,13 @@ const Header = styled.div`
 
 */
 const Body = styled.div`
+    flex: 1;
+    height: 100%;
     .wrapper{
         width: 100%;
         display: grid;
-        border: solid;
-        border-color: black;
-        border-top: none;
-        border-bottom-right-radius: 10px;
-        border-bottom-left-radius: 10px; 
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2);
         
@@ -170,29 +173,33 @@ const CollegeStudentMediaDiary = (props) => {
         <Header>
             <h1>COLLEGE STUDENT MEAL DIARY</h1>
         </Header>
-      <Body>
-        <div class="wrapper">
-            <div class="PicOne">
-                <div class="PicBox">
-                    <img src={props.articles.photo_top}></img>
+        <Body>
+            <div class="wrapper">
+                <div class="PicOne">
+                    <div class="PicBox">
+                        <img src={props.articles.photo_top}></img>
+                    </div>
+                    <p>{props.articles.photo_top_credits}</p>
                 </div>
-                <p>{props.articles.photo_top_credits}</p>
-            </div>
 
             <div class="CaptionOne">
                 <div class="CaptionBox">
-                    <a style = {{textDecoration: 'none', color: 'black' }}href={props.articles.article_top_url}><div class="ArticleName">{props.articles.article_top_title}</div></a>
-                    <div class="ArticleCredit">{props.articles.article_top_byline}</div>
-                    <div class="ArticleBar"></div>
-                    <div class="ArticleDescription">{props.articles.article_top_text}</div>
+                    <a style = {{textDecoration: 'none', color: 'black' }}href={props.articles.article_top_url}>
+                        <div class="ArticleName">{props.articles.article_top_title}</div>
+                        <div class="ArticleCredit">{props.articles.article_top_byline}</div>
+                        <div class="ArticleBar"></div>
+                        <div class="ArticleDescription">{props.articles.article_top_text}</div>
+                    </a>
                 </div>
             </div>
             <div class="CaptionTwo">
                 <div class="CaptionBox">
-                    <a style = {{textDecoration: 'none', color: 'black' }} href={props.articles.article_bottom_url}><div class="ArticleName">{props.articles.article_bottom_title}</div></a>
-                    <div class="ArticleCredit">{props.articles.article_bottom_byline}</div>
-                    <div class="ArticleBar"></div>
-                    <div class="ArticleDescription">{props.articles.article_bottom_text}</div>
+                    <a style = {{textDecoration: 'none', color: 'black' }} href={props.articles.article_bottom_url}>
+                        <div class="ArticleName">{props.articles.article_bottom_title}</div>
+                        <div class="ArticleCredit">{props.articles.article_bottom_byline}</div>
+                        <div class="ArticleBar"></div>
+                        <div class="ArticleDescription">{props.articles.article_bottom_text}</div>
+                    </a>
                 </div>
             </div>
             <div class="PicTwo">
@@ -200,7 +207,7 @@ const CollegeStudentMediaDiary = (props) => {
                     <img src={props.articles.photo_bottom}></img>
                 </div>
                 <p>{props.articles.photo_bottom_credits}</p>
-                </div>
+            </div>
         </div>
       </Body>
       </Container>

@@ -18,12 +18,12 @@ const Illo = styled.img`
 
 const Credits = styled.div`
   position: absolute;
-  font-family: 'Reem Kufi Ink', sans-serif;
-  font-size: 20px;
+  font-family: 'DM Serif Display', serif;
+  font-size: 16px;
   font-weight: 400;
-  color:  white;
-  bottom: -2em;
-  right: 1em;
+  color:  black;
+  bottom: 1em;
+  right: 0.5em;
 
   ${mediaQueries.mobile} {
     font-size: 8px;

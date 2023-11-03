@@ -10,7 +10,7 @@ const DBHeader = styled("div")`
   position: sticky;
   top: 0;
   background: black;
-  width: 100%;
+  width: 100vw;
   padding: 0.2em 0;
   color: white;
   font-family: 'ITC Century';

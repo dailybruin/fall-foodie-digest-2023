@@ -27,6 +27,8 @@ const InnerContainer = styled.div`
   border: 1px black solid;
   border-radius: 5px;
   font-size: 32px;
+  display: flex;
+  align-items: center;
 
 `;
 
@@ -40,7 +42,6 @@ const InnerContainerText = styled.h3`
   letter-spacing: 0.01em;
   text-align: left;
   margin-left: 20px;
-  margin-top: 15px;
 `;
 
 const SemiCircleContainer = styled.div`
@@ -117,9 +118,9 @@ const CarouselItemByLine = styled.p`
 const NavigationButtonRight = styled.button`
   background-color: transparent;
   border: none;
-  width: 20%;
+  width: 45%;
   float: left;
-  font-size: 25px;
+  font-size: 50px;
   cursor: pointer;
   color: white;
   position: absolute;
@@ -130,9 +131,9 @@ const NavigationButtonRight = styled.button`
 const NavigationButtonLeft = styled.button`
   background-color: transparent;
   border: none;
-  width: 20%;
+  width: 45%;
   float: right;
-  font-size: 25px;
+  font-size: 50px;
   cursor: pointer;
   color: white;
   position: absolute;
@@ -167,22 +168,19 @@ export default function Recipes(props) {
             &#8249;
           </NavigationButtonRight>
           <Carousel>
-            <CarouselItemName>
-              {props.recipes[currentRecipe].recipe_name}
-            </CarouselItemName>
-            <CarouselImage
-              src={props.recipes[currentRecipe].recipe_image}
-              alt={props.recipes[currentRecipe].recipe_name}
-            />
+            <a href={props.recipes[currentRecipe].recipe_url}>
+              <CarouselItemName>
+                {props.recipes[currentRecipe].recipe_name}
+              </CarouselItemName>
+              <CarouselImage
+                src={props.recipes[currentRecipe].recipe_image}
+                alt={props.recipes[currentRecipe].recipe_name}
+              />
+            </a>
             <CarouselItemByLine>
               {props.recipes[currentRecipe].recipe_byline}
             </CarouselItemByLine>
             <p>{props.recipes[currentRecipe].recipe_img_credit}</p>
-            <a
-              href={props.recipes[currentRecipe].recipe_url}
-              target="_blank"
-              rel="noopener noreferrer"
-            ></a>
           </Carousel>
           <NavigationButtonLeft onClick={goToNextRecipe}>
             &#8250;

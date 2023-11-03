@@ -17,7 +17,7 @@ Things that this code doesn't account for:
 
 const OuterContainer = styled.div`
   background-color: #fcf1d9;
-  height: 790px;
+  height: fit-content;
   width: 63%;
   margin: 0 auto;
   border: 2px solid black;
@@ -30,9 +30,11 @@ const OuterContainer = styled.div`
 const TitleContainer = styled.div`
   background-color: #41533e;
   height: 60px;
-  top: 0;
-  border-bottom: 2px solid black;
-  border-radius: 8px;
+  /* border-bottom: 2px solid black; */
+  border: 1px black solid;
+  border-radius: 5px;
+  font-size: 32px;
+  width: 100%;
   display: flex;
   align-items: center;
 `;
@@ -42,7 +44,8 @@ const TitleText = styled.div`
   font-size: 32px;
   font-family: 'Figtree', sans-serif;
   text-align: left;
-  padding-left: 20px;
+  letter-spacing: 0.01em;
+  margin-left: 20px;
 `;
 
 const ContentContainer = styled.div`
@@ -68,7 +71,7 @@ const TopLeftSpeechBubble = styled.div`
   // background-color: #ff6961;
   flex: 60%;
   box-sizing: border-box;
-  padding: 52px 20px 25px 50px;
+  padding: 2em 2em;
 `;
 
 const TopRightGif = styled.div`
@@ -89,7 +92,7 @@ const BottomRightSpeechBubble = styled.div`
   // background-color: #77dd77;
   flex: 60%;
   box-sizing: border-box;
-  padding: 25px 50px 52px 20px;
+  padding: 2em 2em;
 `;
 
 const SpeechBubble = styled.div`
@@ -97,6 +100,9 @@ const SpeechBubble = styled.div`
   width: 100%;
   height: 100%;
   position: relative;
+  img {
+    width: 90%;
+  }
 `;
 
 const Gif = styled.img`
@@ -105,7 +111,7 @@ const Gif = styled.img`
   max-height: 100%;
 `;
 
-const SpeechBubbleOverlay = styled.div`
+const SpeechBubbleOverlay = styled.a`
   //background-color: rgba(195, 177, 225, 0.2);
   width: 100%;
   height: 100%;
@@ -113,12 +119,15 @@ const SpeechBubbleOverlay = styled.div`
   top: 0;
   left: 0;
   text-align: left;
+  text-decoration: none;
+  color: black;
 `;
 
-const InterviewTitle = styled.a`
+const InterviewTitle = styled.div`
   display: block;
   text-decoration: none;
-  margin: 15px 30px 5px 30px;
+  /* margin: 15px 30px 5px 30px; */
+  padding: 0.5em 1.5em;
   font-family: 'Lobster Two', sans-serif;
   font-size: 32px;
   color: black;
@@ -128,32 +137,11 @@ const ByLine = styled.div`
   display: block;
   font-family: 'DM Serif Display', serif;
   font-size: 15px;
-  margin: 5px 30px 10px 30px;
+  /* margin: 5px 30px 10px 30px; */
+  padding: 0em 3.5em;
   text-transform: uppercase;
 `;
 
-const ArticleImage = styled.img`
-  width: 43%;
-  height: 37%;
-  object-fit: cover;
-  display: block;
-  background-color: #7c2f18;
-  margin-left: 225px;
-  // margin-right: 30px;
-  border-radius: 10px;
-`;
-
-const PhotoCredits = styled.div`
-  display: block;
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 6px;
-  text-align: right;
-  font-color: black;
-  box-sizing: border-box;
-  padding-right: 45px;
-  margin-top: 8px;
-  text-transform: uppercase;
-`;
 
 const Chef_Interviews = (props) => {
   let data = props.interviews;
@@ -172,16 +160,11 @@ const Chef_Interviews = (props) => {
                 alt="speech bubble"
                 // style={{ height: 'auto', maxWidth: '100%' }}
               />
-              <SpeechBubbleOverlay>
-                <InterviewTitle href={data.interview_top_url}>
+              <SpeechBubbleOverlay href={data.interview_top_url}>
+                <InterviewTitle>
                   {data.interview_top_name}
                 </InterviewTitle>
                 <ByLine>{data.interview_top_byline}</ByLine>
-                <ArticleImage
-                  src={data.interview_top_image}
-                  alt="article image"
-                />
-                <PhotoCredits>PHOTO | {data.interview_top_img_credits}</PhotoCredits>
               </SpeechBubbleOverlay>
             </SpeechBubble>
           </TopLeftSpeechBubble>
@@ -200,16 +183,11 @@ const Chef_Interviews = (props) => {
                 alt="speech bubble"
                 // style={{ height: 'auto', maxWidth: '100%' }}
               />
-              <SpeechBubbleOverlay>
-                <InterviewTitle href={data.interview_bottom_url}>
+              <SpeechBubbleOverlay href={data.interview_top_url}>
+                <InterviewTitle>
                   {data.interview_bottom_name}
                 </InterviewTitle>
                 <ByLine>{data.interview_bottom_byline}</ByLine>
-                <ArticleImage
-                  src={data.interview_bottom_image}
-                  alt="article image"
-                />
-                <PhotoCredits>PHOTO | {data.interview_bottom_img_credits}</PhotoCredits>
               </SpeechBubbleOverlay>
             </SpeechBubble>
           </BottomRightSpeechBubble>

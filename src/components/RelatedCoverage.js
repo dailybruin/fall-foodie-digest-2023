@@ -79,6 +79,7 @@ const RelatedCoverage = (props) => {
                                 article_url={item.article_url}
                                 article_byline={item.article_byline}
                                 article_img_credit={item.article_img_credit}
+                                article_link={item.article_url}
                             />
                         );
                     })
