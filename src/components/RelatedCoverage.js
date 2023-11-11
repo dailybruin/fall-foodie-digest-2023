@@ -46,11 +46,12 @@ const Title = styled.div`
 `
 
 const Grid = styled.div`
+    padding-left: 2%;
+    padding-right: 2%;
     max-width: auto;
     margin: atuo;
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    row-gap: 10px;
     justify-items: center;
     ${mediaQueries.mobile}{
         display: grid;
@@ -60,7 +61,6 @@ const Grid = styled.div`
         column-gap: 1em;
         row-gap: 0.1em;
     }
-    padding-bottom: 3em;
 `;
 
 const RelatedCoverage = (props) => {

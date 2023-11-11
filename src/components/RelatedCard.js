@@ -2,18 +2,19 @@ import styled from 'styled-components'
 import { mediaQueries } from '../shared/config';
 
 const Container = styled.div`
-    width: 236px;
+    width: 80%;
     border-radius: 10px;
     border: 1px solid black;
     left: 322px;
     background-color: white;
     margin-right: auto;
     margin-left: auto;
-    margin-top: 50px;
     a{
         text-decoration: none;
         color: black;
     }
+    margin-top: 15%;
+    margin-bottom: 15%;
 
     ${mediaQueries.mobile}{
         width: 80%;

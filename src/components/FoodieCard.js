@@ -2,7 +2,9 @@ import styled from 'styled-components'
 import { mediaQueries } from '../shared/config';
 
 const Container = styled.div`
-    width: 373px;
+    width: 90%;
+    height: fit-content;
+    min-height: 90%;
     border-radius: 10px;
     border: 1px solid black;
     left: 322px;

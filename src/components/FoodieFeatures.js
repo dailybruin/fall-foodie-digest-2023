@@ -37,6 +37,8 @@ const Title = styled.div`
 `
 
 const Grid = styled.div`
+    padding-left: 5%;
+    padding-right: 5%;
     max-width: auto;
     margin: auto;
     display: grid;

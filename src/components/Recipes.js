@@ -11,8 +11,7 @@ const OuterContainer = styled.div`
   align-items: center;
   margin: 20px auto;
   width: 63%;
-  min-height: 400px;
-  height: fit-content;
+  min-height: 450px;
   border: 2px black solid;
   border-radius: 10px;
   background-color: #fcf1d9;
@@ -49,12 +48,17 @@ const SemiCircleContainer = styled.div`
   height: 70%; /* Adjust the height as needed */
   position: absolute;
   bottom: 0;
+  ${mediaQueries.tablet}{
+    bottom: -5;
+}
 `;
 
 const SemiCircle = styled.img`
   width: 100%;
-  height: 100%;
+  left: 0;
+  position: absolute;
   bottom: 0;
+  
 `;
 
 //CAROUSEL
