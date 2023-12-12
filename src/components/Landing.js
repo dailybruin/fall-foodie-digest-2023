@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { mediaQueries } from "../shared/config";
+import GIF from '../images/landingGif.gif'
 
 const Container = styled.div`
   width: 100%;
@@ -33,7 +34,7 @@ const Credits = styled.div`
 export default function Landing(props) {
     return (
       <Container>
-        <Illo src={props.data.landing_image}></Illo>
+        <Illo src={GIF}></Illo>
         <Credits>{props.data.landing_credits}</Credits>
       </Container>
     );

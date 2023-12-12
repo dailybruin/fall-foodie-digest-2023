@@ -101,10 +101,9 @@ const StaffFavorites = (props) => {
          </GreenBox>
             <LittleBox>
             <BrownBox>
-                <video width="100%" height="100%" controls>
-                    <source src={props.video.video_url} type="video/mp4" />
-                    Your browser does not support the video tag.
-                </video>
+                <iframe width="100%" height="100%"
+                    source src={props.video.video_url} >
+                </iframe>
             </BrownBox>
             </LittleBox>
             <Caption>{props.video.video_name}</Caption>

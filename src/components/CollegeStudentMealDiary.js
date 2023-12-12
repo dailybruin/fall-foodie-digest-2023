@@ -126,10 +126,8 @@ const Body = styled.div`
         // display: flex;
         // justify-content: center;
         img {
-            width: auto;
-            height: 25vh;
-            padding: 2 em;
-            position: aboslute;
+            width: 90%;
+            height: 90%;
         
         }
     }

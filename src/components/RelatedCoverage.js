@@ -46,13 +46,13 @@ const Title = styled.div`
 `
 
 const Grid = styled.div`
-    padding-left: 2%;
-    padding-right: 2%;
-    max-width: auto;
+    padding: 2%;
+    // max-width: auto;
     margin: atuo;
     display: grid;
     grid-template-columns: repeat(3,1fr);
     justify-items: center;
+
     ${mediaQueries.mobile}{
         display: grid;
         grid-template-columns: repeat(1,1fr);

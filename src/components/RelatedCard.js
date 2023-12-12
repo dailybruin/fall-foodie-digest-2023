@@ -5,16 +5,13 @@ const Container = styled.div`
     width: 80%;
     border-radius: 10px;
     border: 1px solid black;
-    left: 322px;
     background-color: white;
-    margin-right: auto;
-    margin-left: auto;
+    height: 20em;
+    
     a{
         text-decoration: none;
         color: black;
     }
-    margin-top: 15%;
-    margin-bottom: 15%;
 
     ${mediaQueries.mobile}{
         width: 80%;

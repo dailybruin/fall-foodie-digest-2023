@@ -106,7 +106,6 @@ const SpeechBubble = styled.div`
 `;
 
 const Gif = styled.img`
-  background-color: #ff6961;
   max-width: 100%;
   max-height: 100%;
 `;
